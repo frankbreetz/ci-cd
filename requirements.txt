@@ -33,7 +33,7 @@ joblib==1.2.0
 networkx==2.6.3
 rapidfuzz==2.0.11
 seaborn==0.11.2
-#-e git+https://github.com/TeePublic/teepublic-search-client-python.git@bcc37629486f193b7c6acaa1d97a7d86ade9326e#egg=swagger_client
+-e git+https://github.com/TeePublic/teepublic-search-client-python.git@bcc37629486f193b7c6acaa1d97a7d86ade9326e#egg=swagger_client
 #larger libraries previously in dockerfile
 catboost==1.0.4
 arize==5.0.3
