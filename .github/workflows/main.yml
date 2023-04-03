@@ -19,4 +19,4 @@ jobs:
     - name: Deploy to Astro
       run: |
         curl -sSL install.astronomer.io | sudo bash -s
-        astro deploy
+         (tar -czh . | docker build -t my_image -) && astro deploy -i my_image
