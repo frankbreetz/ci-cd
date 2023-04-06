@@ -15,6 +15,10 @@ jobs:
         id: extract_branch
         run: echo "branch=$(echo ${GITHUB_REF#refs/heads/})" >>$GITHUB_OUTPUT
         shell: bash
+      - name: get path
+        id: get_path
+        run: pwd
+        shell: bash
       - name: edit deployment.yaml with feature branch name
         uses: mikefarah/yq@master
         with:
