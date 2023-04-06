@@ -12,5 +12,3 @@ deployment:
   worker_queues:
     - name: default
       worker_type: e2-standard-4
-      pod_cpu: "0.1"
-      pod_ram: 0.268435456G
