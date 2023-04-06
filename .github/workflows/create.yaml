@@ -18,11 +18,11 @@ jobs:
       - name: edit deployment.yaml with feature branch name
         uses: mikefarah/yq@master
         with:
-          cmd: yq -i '.deployment.configuration.name = "${{ steps.extract_branch.outputs.branch }}"' deployment.yaml
+          cmd: yq -i '.deployment.configuration.name = "${{ steps.extract_branch.outputs.branch }}"' ./deployment.yaml
       - name: create deployment
         run: |
           curl -sSL https://install.astronomer.io | sudo bash -s
-          astro deployment create --deployment-file deployment.yaml >> eph_deployment.yaml
+          astro deployment create --deployment-file ./deployment.yaml >> eph_deployment.yaml
         shell: bash
 
 
