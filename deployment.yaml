@@ -1,16 +1,16 @@
 deployment:
-    configuration:
-        name: ""
-        description: ""
-        runtime_version: 7.4.2
-        dag_deploy_enabled: false
-        executor: KubernetesExecutor
-        scheduler_au: 5
-        scheduler_count: 1
-        cluster_name: ADE GCP Cluster - Dev
-        workspace_name: Frank Test
-    worker_queues:
-        - name: default
-          worker_type: e2-standard-4
-          pod_cpu: "0.1"
-          pod_ram: 0.268435456G
+  configuration:
+    name: ""
+    description: ""
+    runtime_version: 7.4.2
+    dag_deploy_enabled: false
+    executor: KubernetesExecutor
+    scheduler_au: 5
+    scheduler_count: 1
+    cluster_name: ADE GCP Cluster - Dev
+    workspace_name: Frank Test
+  worker_queues:
+    - name: default
+      worker_type: e2-standard-4
+      pod_cpu: "0.1"
+      pod_ram: 0.268435456G
