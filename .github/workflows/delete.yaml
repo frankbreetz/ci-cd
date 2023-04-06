@@ -1,0 +1,17 @@
+name: Astronomer CI - Delete Ephemeral Airflow
+
+on:
+  [delete]
+
+jobs:
+  delete-deployment:
+    if: github.event.ref_type == 'branch'
+    env:
+      ASTRO_API_TOKEN: ${{ secrets.ASTRO_API_TOKEN }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: delete deployment
+        run: |
+          curl -sSL https://install.astronomer.io | sudo bash -s
+          echo y | astro deployment delete --deployment-name="${{ github.event.ref }}"
+        shell: bash
