@@ -17,7 +17,7 @@ jobs:
         shell: bash
       - name: get path
         id: get_path
-        run: pwd
+        run: ls
         shell: bash
       - name: edit deployment.yaml with feature branch name
         uses: mikefarah/yq@master
